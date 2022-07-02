@@ -5,7 +5,7 @@ app=Flask(__name__)
 
 @app.route("/",methods=['GET','POST'])
 def index():
-    return "This is my first Project Deployment"
+    return "Updated to test CI/CD pipeline"
 
 
 if __name__=="__main__":
