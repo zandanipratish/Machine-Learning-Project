@@ -3,7 +3,7 @@ from typing import List
 
 #Declaring variables for setup functions
 PROJECT_NAME="housing-predictor"
-VERSION="0.0.2"
+VERSION="0.0.1"
 AUTHOR="Pratish Zandani"
 DESCRIPTION="This is FSDS batch's first ML project"
 PACKAGES=["housing"]
@@ -27,9 +27,7 @@ setup(
     author=AUTHOR,
     description=DESCRIPTION,
     packages=PACKAGES, # or write packages=find_packages()  - which will do same thing
-    """
-    find_packages() will find all the folders in our project for __init__.py file. Any folder having __init__.py file is called package and setup.py is a module.
-    """
+    #    find_packages() will find all the folders in our project for __init__.py file. Any folder having __init__.py file is called package and setup.py is a module.
     install_requires=get_requirements_list()
 )
 

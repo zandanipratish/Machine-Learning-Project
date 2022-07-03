@@ -4,3 +4,4 @@ sklearn
 pandas
 numpy
 #-e . -> This will inatll all the packges and python setup.py dont work
+-e .
