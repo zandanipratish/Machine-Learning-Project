@@ -1,4 +1,4 @@
-from  setuptools import setup
+from  setuptools import find_packages, setup
 from typing import List
 
 #Declaring variables for setup functions
@@ -18,7 +18,7 @@ def get_requirements_list()->List[str]:
     """
     with open(REQUIREMENTS_FILE_NAME) as requirement_file:
         return requirement_file.readline()
-        #return requirement_file.readline().remove("-e .") --- This should be used when you have find_packages() in setup function below to install all packages
+        #return requirement_file.readline().remove("-e .") ## This should be used when you have find_packages() in setup function below to install all packages
 
 
 setup(
@@ -29,6 +29,8 @@ setup(
     packages=PACKAGES, # or write packages=find_packages()  - which will do same thing
     #    find_packages() will find all the folders in our project for __init__.py file. Any folder having __init__.py file is called package and setup.py is a module.
     install_requires=get_requirements_list()
+    #packages=find_packages(),
+    #install_requires=get_requirements_list())
 )
 
 if __name__=="__main__":
